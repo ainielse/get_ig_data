@@ -1,0 +1,36 @@
+{
+  "name" : "tz_selector",
+  "version" : "0.1",
+  "description" : "This plug-in will set the APEX session time zone to the user's browser time zone. It is optimized for use with the data type timestamp with local time zone. The item can be a hidden item that does not allow the user to explicitly set the time zone, or it can be a select list that allows the user to select the time zone. Please review the help related to each setting. The item can be used on page 0 (the global page) or on one or more pages within the application. This item can be used instead of the APEX Application Globalization setting for Automatic Time Zone.",
+  "keywords" : ["timezone", "date", "time", "zone","automatic","globalization"],
+  "homepage" : "https://github.com/ainielse/tz_selector",
+  "bugs" : {
+    "url" : "https://github.com/ainielse/tz_selector/issues",
+    "email" : "anielsen@insum.ca"
+  },
+  "license" : "MIT",
+  "commercial" : "No",
+  "author" : {
+    "name" : "Anton Nielsen",
+    "email" : "anielsen@insum.ca",
+    "url" : "https://insum.ca
+    "twitter" : "C2Anton"
+    "donationUrl" : null
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/ainielse/tz_selector"
+  },
+  "oracle" : {
+    "versions" : ["11", "12","18","20"],
+    "apex" : {
+      "versions" : ["20.2"],
+      "plugin" : {
+        "internalName" : "CA.INSUM.TZSELECTOR",
+        "type" : "item",
+        "demo" : "https://apex.oracle.com/pls/apex/anton/r/time-zone-selector/home",
+        "previewImage" : "https://apex.oracle.com/pls/apex/anton/r/135765/files/static/v6/app-135765-logo.png"
+      }
+    }
+  }
+}
