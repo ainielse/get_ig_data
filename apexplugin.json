@@ -29,7 +29,7 @@
         "internalName" : "CA.INSUM.TZSELECTOR",
         "type" : "item",
         "demo" : "https://apex.oracle.com/pls/apex/anton/r/time-zone-selector/home",
-        "previewImage" : "https://apex.oracle.com/pls/apex/anton/r/135765/files/static/v6/app-135765-logo.png"
+        "previewImage" : "https://raw.github.com/ainielse/tz_selector/master/tz_selector.png"
       }
     }
   }
