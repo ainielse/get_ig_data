@@ -16,4 +16,4 @@ This plug-in solves two issues related to the APEX Application Globalization set
 Import this plug-in into your application. Add the plug-in as an item on any page. (Note: this plugin can be used on Page 0 and some use cases may require that the plug-in be added twice to the same page.)
 
 ## Documentation
-The plug-in includes extensive help. Please the help associated with the plug-in after adding the item to a page.
+The plug-in includes extensive help. Please see the help associated with the plug-in after adding the item to a page.
