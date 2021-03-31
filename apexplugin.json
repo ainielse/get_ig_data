@@ -24,7 +24,7 @@
   "oracle" : {
     "versions" : ["12.1.0.2","19.1.0.0"],
     "apex" : {
-      "versions" : ["20.2"],
+      "versions" : ["20.2.0.00.20"],
       "plugin" : {
         "internalName" : "CA.INSUM.TZSELECTOR",
         "type" : "item",
