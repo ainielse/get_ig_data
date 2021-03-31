@@ -22,7 +22,7 @@
     "url" : "https://github.com/ainielse/tz_selector"
   },
   "oracle" : {
-    "versions" : ["12.1.0.2"],
+    "versions" : ["12.1.0.2","19.1.0"],
     "apex" : {
       "versions" : ["20.2"],
       "plugin" : {
