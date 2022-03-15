@@ -24,10 +24,10 @@
   "oracle" : {
     "versions" : ["12.1.0.2","19.1.0.0"],
     "apex" : {
-      "versions" : ["20.2.0.00.20"],
+      "versions" : ["20.1.0.00.13"],
       "plugin" : {
         "internalName" : "CA.INSUM.GETIGDATA",
-        "type" : "item",
+        "type" : "dynamic action",
         "demo" : "https://apex.oracle.com/pls/apex/anton/r/ait66/home",
         "previewImage" : "https://raw.github.com/ainielse/tz_selector/master/getgriddata.png"
       }
