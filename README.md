@@ -5,15 +5,53 @@ Oracle APEX Get IG Data Dynamic Action Plug-in
 This plug-in was built, tested, and exported from APEX 20.1.
 
 ## Description
-This plug-in will set the APEX session time zone to the user's browser time zone. It is optimized for use with the data type "timestamp with local time zone." The item can be a hidden item that does not allow the user to explicitly set the time zone, or it can be a select list that allows the user to select the time zone. Please review the help related to each setting. The item can be used on page 0 (the global page) or on one or more pages within the application. This item can be used instead of the APEX Application Globalization setting for Automatic Time Zone.
+Places the data from an Interactive Grid into a page item as a JSON string. That page item can then be submitted for processing as server side code within a Dynamic Action step or as an item to submit for a report region. **The select statement used to process the data will be shown in the browser console.** The INSUM$ROW column is always added as an indicator of the way the data was sorted at the time it was taken from the IG. An example is shown below.
+```
+select
+       a.ID,
+       a.FIRST_NAME,
+       a.LAST_NAME,
+       a.INSUM$ROW
+  from json_table (:P1_GRID_DATA , '$[*]'
+         columns 
+           ID                              varchar2(4000) path '$.ID',
+           FIRST_NAME                      varchar2(4000) path '$.FIRST_NAME',
+           LAST_NAME                       varchar2(4000) path '$.LAST_NAME',
+           INSUM$ROW                       number         path '$.INSUM$ROW'
+                 ) a 
+```
 
-This plug-in solves two issues related to the APEX Application Globalization setting for Automatic Time Zone.
+This may be used within an "Execute PL/SQL Code" Dynamic Action as shown below:
 
-- This plug-in works with public applications.
-- When used with "timestamp with local time zone," this plug-in wil the data base will recognize when to apply time zone changes due to daylight saving time.
+```
+begin
+  for i in (
+            select
+              a.ID,
+              a.FIRST_NAME,
+              a.LAST_NAME,
+              a.INSUM$ROW
+            from json_table (:P1_GRID_DATA , '$[*]'
+                columns 
+                  ID                              varchar2(4000) path '$.ID',
+                  FIRST_NAME                      varchar2(4000) path '$.FIRST_NAME',
+                  LAST_NAME                       varchar2(4000) path '$.LAST_NAME',
+                  INSUM$ROW                       number         path '$.INSUM$ROW'
+                 ) a 
+                        )
+      ) loop
 
+    my_procedure(i.id, i.first_name, i.last_name);
+
+  end loop;
+end;
+```
 ## Installation
-Import this plug-in into your application. Add the plug-in as an item on any page. (Note: this plugin can be used on Page 0 and some use cases may require that the plug-in be added twice to the same page.)
+Import this plug-in into your application. 
+
+## Usage
+Create a page with an Interactive Grid. Add a Static ID to the IG region. Create a hidden item with protection turned off. Add the plug-in as Dynamic Action step associated with a button (or other event). After triggering the event, inspect the console to obtain the SQL query associated with the data.
+As an example of how it works, create an Interactive Report using the query obtained from the console. Be sure to add the hidden item as a Page Item to Submit with the IR. Add a final step to the Dynamic action that refreshes the IR report region. 
 
 ## Documentation
-The plug-in includes extensive help. Please see the help associated with the plug-in after adding the item to a page.
+The plug-in includes extensive help. Please see the help associated with the plug-in after adding it to a page.
