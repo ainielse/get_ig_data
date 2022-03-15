@@ -1,11 +1,11 @@
 {
-  "name" : "tz_selector",
-  "version" : "0.1",
-  "description" : "This plug-in will set the APEX session time zone to the user's browser time zone. It is optimized for use with the data type timestamp with local time zone. The item can be a hidden item that does not allow the user to explicitly set the time zone, or it can be a select list that allows the user to select the time zone. Please review the help related to each setting. The item can be used on page 0 (the global page) or on one or more pages within the application. This item can be used instead of the APEX Application Globalization setting for Automatic Time Zone.",
-  "keywords" : ["timezone", "date", "time", "zone","automatic","globalization"],
-  "homepage" : "https://github.com/ainielse/tz_selector",
+  "name" : "get_ig_data",
+  "version" : "1.0",
+  "description" : "This plug-in will get data from an Interactive Grid and place the data into a page item. The plugin also provides the SQL query utilized to parse the data.",
+  "keywords" : ["IG", "Interactive Grid", "DA", "Dynamic Action", "Plug-in"],
+  "homepage" : "https://github.com/ainielse/get_ig_data",
   "bugs" : {
-    "url" : "https://github.com/ainielse/tz_selector/issues",
+    "url" : "https://github.com/ainielse/get_ig_data/issues",
     "email" : "anielsen@insum.ca"
   },
   "license" : "MIT",
@@ -19,16 +19,16 @@
   },
   "repository" : {
     "type" : "git",
-    "url" : "https://github.com/ainielse/tz_selector"
+    "url" : "https://github.com/ainielse/get_ig_data"
   },
   "oracle" : {
     "versions" : ["12.1.0.2","19.1.0.0"],
     "apex" : {
       "versions" : ["20.2.0.00.20"],
       "plugin" : {
-        "internalName" : "CA.INSUM.TZSELECTOR",
+        "internalName" : "CA.INSUM.GETIGDATA",
         "type" : "item",
-        "demo" : "https://apex.oracle.com/pls/apex/anton/r/time-zone-selector/home",
+        "demo" : "https://internalappsdev.insum.app/ords/inside/r/plugin/home?",
         "previewImage" : "https://raw.github.com/ainielse/tz_selector/master/tz_selector.png"
       }
     }
