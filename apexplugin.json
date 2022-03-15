@@ -28,8 +28,8 @@
       "plugin" : {
         "internalName" : "CA.INSUM.GETIGDATA",
         "type" : "item",
-        "demo" : "https://internalappsdev.insum.app/ords/inside/r/plugin/home?",
-        "previewImage" : "https://raw.github.com/ainielse/tz_selector/master/tz_selector.png"
+        "demo" : "https://apex.oracle.com/pls/apex/anton/r/ait66/home",
+        "previewImage" : "https://raw.github.com/ainielse/tz_selector/master/getgriddata.png"
       }
     }
   }
