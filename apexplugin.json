@@ -1,7 +1,7 @@
 {
   "name" : "get_ig_data",
   "version" : "1.0",
-  "description" : "This plug-in will get data from an Interactive Grid and place the data into a page item. The plugin also provides the SQL query utilized to parse the data.",
+  "description" : "This plug-in will get data from an Interactive Grid and place the data into a page item. The plugin also provides the SQL query to parse the data.",
   "keywords" : ["IG", "Interactive Grid", "DA", "Dynamic Action", "Plug-in"],
   "homepage" : "https://github.com/ainielse/get_ig_data",
   "bugs" : {
