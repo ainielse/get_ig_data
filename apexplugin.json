@@ -29,7 +29,7 @@
         "internalName" : "CA.INSUM.GETIGDATA",
         "type" : "dynamic action",
         "demo" : "https://apex.oracle.com/pls/apex/anton/r/ait66/home",
-        "previewImage" : "https://raw.github.com/ainielse/tz_selector/master/getgriddata.png"
+        "previewImage" : "https://raw.github.com/ainielse/get_ig_data/master/getgriddata.png"
       }
     }
   }
