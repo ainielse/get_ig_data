@@ -55,3 +55,6 @@ As an example of how it works, create an Interactive Report using the query obta
 
 ## Documentation
 The plug-in includes extensive help. Please see the help associated with the plug-in after adding it to a page.
+
+## Known Issues
+If you have an IG on Page Zero (0), it needs to have a globally unique static ID. If it shares a static ID with an IG on another page, this plug-in could get confused. It is possible to fix this, but I'm unlikely to do so, as, really, if you have a static ID on Page 0, it really should be globally unique anyway.
