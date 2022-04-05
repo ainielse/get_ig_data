@@ -6,37 +6,37 @@ whenever sqlerror exit sql.sqlcode rollback
 -- ORACLE Application Express (APEX) export file
 --
 -- You should run the script connected to SQL*Plus as the Oracle user
--- APEX_210200 or as the owner (parsing schema) of the application.
+-- APEX_200100 or as the owner (parsing schema) of the application.
 --
 -- NOTE: Calls to apex_application_install override the defaults below.
 --
 --------------------------------------------------------------------------------
 begin
 wwv_flow_api.import_begin (
- p_version_yyyy_mm_dd=>'2021.10.15'
-,p_release=>'21.2.5'
-,p_default_workspace_id=>113067632160437694
-,p_default_application_id=>117016
+ p_version_yyyy_mm_dd=>'2020.03.31'
+,p_release=>'20.1.0.00.13'
+,p_default_workspace_id=>172414234705169759
+,p_default_application_id=>135
 ,p_default_id_offset=>0
-,p_default_owner=>'ANTON'
+,p_default_owner=>'INSIDE'
 );
 end;
 /
  
-prompt APPLICATION 117016 - ait66
+prompt APPLICATION 135 - plugin
 --
 -- Application Export:
---   Application:     117016
---   Name:            ait66
---   Date and Time:   15:30 Tuesday April 5, 2022
---   Exported By:     ANTON
+--   Application:     135
+--   Name:            plugin
+--   Date and Time:   12:45 Tuesday April 5, 2022
+--   Exported By:     ANIELSEN@INSUM.CA
 --   Flashback:       0
 --   Export Type:     Component Export
 --   Manifest
---     PLUGIN: 48402668691203991835
+--     PLUGIN: 244321356707522462
 --   Manifest End
---   Version:         21.2.5
---   Instance ID:     63113759365424
+--   Version:         20.1.0.00.13
+--   Instance ID:     199018087689490
 --
 
 begin
@@ -47,7 +47,7 @@ end;
 prompt --application/shared_components/plugins/dynamic_action/ca_insum_getigdata
 begin
 wwv_flow_api.create_plugin(
- p_id=>wwv_flow_api.id(48402668691203991835)
+ p_id=>wwv_flow_api.id(244321356707522462)
 ,p_plugin_type=>'DYNAMIC ACTION'
 ,p_name=>'CA.INSUM.GETIGDATA'
 ,p_display_name=>'Get IG Data'
@@ -222,8 +222,8 @@ wwv_flow_api.create_plugin(
 ,p_version_identifier=>'0.1'
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(48402682299704391089)
-,p_plugin_id=>wwv_flow_api.id(48402668691203991835)
+ p_id=>wwv_flow_api.id(244334965207921716)
+,p_plugin_id=>wwv_flow_api.id(244321356707522462)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -279,8 +279,8 @@ wwv_flow_api.create_plugin_attribute(
 '</pre>'))
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(48402676605506288401)
-,p_plugin_id=>wwv_flow_api.id(48402668691203991835)
+ p_id=>wwv_flow_api.id(244329271009819028)
+,p_plugin_id=>wwv_flow_api.id(244321356707522462)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -294,8 +294,8 @@ wwv_flow_api.create_plugin_attribute(
 '<p>This item will usually be a hidden item with protection set to "off."</p>'))
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(48402671251915234068)
-,p_plugin_id=>wwv_flow_api.id(48402668691203991835)
+ p_id=>wwv_flow_api.id(244323917418764695)
+,p_plugin_id=>wwv_flow_api.id(244321356707522462)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -308,24 +308,24 @@ wwv_flow_api.create_plugin_attribute(
 ,p_help_text=>'Indicate if all rows or only selected rows should be returned. Note: In both cases, only rows displayed on the screen will be returned.'
 );
 wwv_flow_api.create_plugin_attr_value(
- p_id=>wwv_flow_api.id(48402671538224235275)
-,p_plugin_attribute_id=>wwv_flow_api.id(48402671251915234068)
+ p_id=>wwv_flow_api.id(244324203727765902)
+,p_plugin_attribute_id=>wwv_flow_api.id(244323917418764695)
 ,p_display_sequence=>10
 ,p_display_value=>'All Rows'
 ,p_return_value=>'ALL'
 ,p_help_text=>'Return all rows regardless of the row selector state.'
 );
 wwv_flow_api.create_plugin_attr_value(
- p_id=>wwv_flow_api.id(48402671946069238750)
-,p_plugin_attribute_id=>wwv_flow_api.id(48402671251915234068)
+ p_id=>wwv_flow_api.id(244324611572769377)
+,p_plugin_attribute_id=>wwv_flow_api.id(244323917418764695)
 ,p_display_sequence=>20
 ,p_display_value=>'Selected Rows'
 ,p_return_value=>'SELECTED'
 ,p_help_text=>'Only return rows where the row selector is checked.'
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(48403016293989304873)
-,p_plugin_id=>wwv_flow_api.id(48402668691203991835)
+ p_id=>wwv_flow_api.id(244668959492835500)
+,p_plugin_id=>wwv_flow_api.id(244321356707522462)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -338,8 +338,8 @@ wwv_flow_api.create_plugin_attribute(
 ||'ypically be upper case.'
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(48402675414113274148)
-,p_plugin_id=>wwv_flow_api.id(48402668691203991835)
+ p_id=>wwv_flow_api.id(244328079616804775)
+,p_plugin_id=>wwv_flow_api.id(244321356707522462)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>50
